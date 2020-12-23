@@ -8,9 +8,16 @@ import {
 } from 'react-native';
 
 const Item = ({title, image, navigation, servings, ingredients}) => (
-  <TouchableOpacity  
+  <TouchableOpacity
     style={styles.item}
-    onPress={() => navigation.navigate('Ingredients',{image: image, servings: servings, ingredients: ingredients, title: title})}>
+    onPress={() =>
+      navigation.navigate('Ingredients', {
+        image: image,
+        servings: servings,
+        ingredients: ingredients,
+        title: title,
+      })
+    }>
     <Image style={styles.imageStyles} source={image}></Image>
     <Text style={styles.title}>{title}</Text>
   </TouchableOpacity>
@@ -18,7 +25,13 @@ const Item = ({title, image, navigation, servings, ingredients}) => (
 
 const List = ({data, navigation}) => {
   const renderItem = ({item}) => (
-    <Item title={item.title} image={item.image} navigation={navigation} servings={item.servings} ingredients={item.ingredients}/>
+    <Item
+      title={item.title}
+      image={item.image}
+      navigation={navigation}
+      servings={item.servings}
+      ingredients={item.ingredients}
+    />
   );
   return (
     <FlatList
@@ -38,8 +51,8 @@ const styles = StyleSheet.create({
     marginHorizontal: 1,
   },
   title: {
-    fontSize: 15,    
-    color:'white'
+    fontSize: 15,
+    color: 'white',
   },
   imageStyles: {
     width: 100,

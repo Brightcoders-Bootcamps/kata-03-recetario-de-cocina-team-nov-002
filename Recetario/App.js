@@ -10,8 +10,16 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" options={{headerShown: false}} component={HomeScreen} />
-        <Stack.Screen name="Ingredients" component={IngrdientsScreen} />
+        <Stack.Screen
+          name="Home"
+          options={{headerShown: false}}
+          component={HomeScreen}
+        />
+        <Stack.Screen
+          name="Ingredients"
+          options={{headerShown: false}}
+          component={IngrdientsScreen}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -17,7 +17,7 @@ const Bar = () => {
 const styles = StyleSheet.create({
   searchBar: {
     borderRadius: 10,
-    marginTop:50
+    marginTop: 50,
   },
 });
 

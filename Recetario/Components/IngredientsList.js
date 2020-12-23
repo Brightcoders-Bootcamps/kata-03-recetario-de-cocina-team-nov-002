@@ -1,21 +1,16 @@
 import React from 'react';
-import {
-  FlatList,
-  StyleSheet,
-  Text,
-  Image,
-  TouchableOpacity,
-} from 'react-native';
+import {FlatList, StyleSheet, Text, View} from 'react-native';
 
-const Item = ({title, image, navigation, servings, ingredients}) => (
-    <View>
-        <Text>Hola mundo</Text>
-    </View>
+const Item = ({title, cantidad}) => (
+  <View style={styles.ingredientList}>
+    <Text style={styles.ingredientListText}>{title}</Text>
+    <Text style={styles.ingredientListText}>{cantidad}</Text>
+  </View>
 );
 
-const List = ({data}) => {
+const IngredientsList = ({data}) => {
   const renderItem = ({item}) => (
-    <Item title={item.title} image={item.image} />
+    <Item title={item.nombre} cantidad={item.cantidad} />
   );
   return (
     <FlatList
@@ -27,20 +22,19 @@ const List = ({data}) => {
 };
 
 const styles = StyleSheet.create({
-  item: {
-    paddingHorizontal: 10,
-    paddingVertical: 1,
-    marginVertical: 1,
-    marginHorizontal: 1,
+  ingredientList: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginLeft: 17,
+    marginRight: 17,
+    borderBottomWidth: 1,
+    borderBottomColor: 'gray',
   },
-  title: {
-    fontSize: 32,
-  },
-  imageStyles: {
-    width: 100,
-    height: 110,
-    borderRadius: 10,
+  ingredientListText: {
+    color: 'white',
+    fontSize: 20,
+    marginTop: 20,
   },
 });
 
-export default List;
+export default IngredientsList;
