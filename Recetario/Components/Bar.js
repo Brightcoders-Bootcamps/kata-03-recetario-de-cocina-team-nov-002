@@ -1,4 +1,3 @@
-
 import React, {useState} from 'react';
 import {SearchBar} from 'react-native-elements';
 import {StyleSheet} from 'react-native';
@@ -16,11 +15,9 @@ const Bar = () => {
 };
 
 const styles = StyleSheet.create({
-  searchBar:
-  {
-    borderRadius:10       
-  }
-
-})
+  searchBar: {
+    borderRadius: 10,
+  },
+});
 
 export default Bar;
