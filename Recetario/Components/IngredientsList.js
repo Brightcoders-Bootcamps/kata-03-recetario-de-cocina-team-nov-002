@@ -8,21 +8,17 @@ import {
 } from 'react-native';
 
 const Item = ({title, image, navigation, servings, ingredients}) => (
-  <TouchableOpacity  
-    style={styles.item}
-    onPress={() => navigation.navigate('Ingredients',{image: image, servings: servings, ingredients: ingredients, title: title})}>
-    <Image style={styles.imageStyles} source={image}></Image>
-    <Text style={styles.title}>{title}</Text>
-  </TouchableOpacity>
+    <View>
+        <Text>Hola mundo</Text>
+    </View>
 );
 
-const List = ({data, navigation}) => {
+const List = ({data}) => {
   const renderItem = ({item}) => (
-    <Item title={item.title} image={item.image} navigation={navigation} servings={item.servings} ingredients={item.ingredients}/>
+    <Item title={item.title} image={item.image} />
   );
   return (
     <FlatList
-      horizontal={true}
       data={data}
       renderItem={renderItem}
       keyExtractor={(item) => item.id}
@@ -38,8 +34,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 1,
   },
   title: {
-    fontSize: 15,    
-    color:'white'
+    fontSize: 32,
   },
   imageStyles: {
     width: 100,

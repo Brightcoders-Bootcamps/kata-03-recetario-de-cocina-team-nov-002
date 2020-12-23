@@ -7,7 +7,7 @@ const Bar = () => {
   return (
     <SearchBar
       styles={styles.searchBar}
-      placeholder="Busca Algo"
+      placeholder="What do you want yo eat?"
       onChangeText={setSearch}
       value={search}
     />
@@ -17,6 +17,7 @@ const Bar = () => {
 const styles = StyleSheet.create({
   searchBar: {
     borderRadius: 10,
+    marginTop:50
   },
 });
 
