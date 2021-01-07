@@ -9,14 +9,14 @@ import {
 import {Icon} from 'react-native-elements';
 import IngredientsList from './IngredientsList';
 
-const IngrdientsScreen = ({route}) => {
+const IngrdientsScreen = ({route, navigation}) => {
   const {image, servings, ingredients, title} = route.params;
   return (
     <View style={styles.container}>
       <ImageBackground style={styles.imageStyles} source={image}>
         <View style={styles.imageContainer}>
           <View style={styles.imageContainerIcons}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Home')}>
               <Icon
                 style={styles.imageContainerIconsClose}
                 name="close"
