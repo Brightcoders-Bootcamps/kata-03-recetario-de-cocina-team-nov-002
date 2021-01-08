@@ -113,4 +113,10 @@ Al ser reutilizables `List Item` y `Horizontal List`pueden servir tanto para tre
 
 ## Recursos
 [Para apoyo de tus actividades utiliza esta lista de recursos recomendados](https://github.com/bright-coders/commons/tree/master/topics/resources-react-native)
+
+# Puntución obtenida
+- CodeClimate [![Maintainability](https://api.codeclimate.com/v1/badges/6e17634713b128d402e6/maintainability)](https://codeclimate.com/github/GracielaJazmin/recetario/maintainability)
+
+- DeepScan  [![DeepScan grade](https://deepscan.io/api/teams/12132/projects/15434/branches/308539/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=12132&pid=15434&bid=308539)
+
   

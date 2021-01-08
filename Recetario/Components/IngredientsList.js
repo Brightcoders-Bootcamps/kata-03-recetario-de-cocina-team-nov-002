@@ -1,15 +1,16 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 
-const Item = ({title, cantidad}) => (
+const Item = ({ title, cantidad }) => (
   <View style={styles.ingredientList}>
     <Text style={styles.ingredientListText}>{title}</Text>
     <Text style={styles.ingredientListText}>{cantidad}</Text>
   </View>
 );
 
-const IngredientsList = ({data}) => {
-  const renderItem = ({item}) => (
+const IngredientsList = ({ data }) => {
+  const renderItem = ({ item }) => (
     <Item title={item.nombre} cantidad={item.cantidad} />
   );
   return (
@@ -28,13 +29,13 @@ const styles = StyleSheet.create({
     marginLeft: 17,
     marginRight: 17,
     borderBottomWidth: 1,
-    borderBottomColor: 'gray',
+    borderBottomColor: 'gray'
   },
   ingredientListText: {
     color: 'white',
     fontSize: 20,
-    marginTop: 20,
-  },
+    marginTop: 20
+  }
 });
 
 export default IngredientsList;

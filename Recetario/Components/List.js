@@ -1,13 +1,14 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import {
   FlatList,
   StyleSheet,
   Text,
   Image,
-  TouchableOpacity,
+  TouchableOpacity
 } from 'react-native';
 
-const Item = ({title, image, navigation, servings, ingredients}) => (
+const Item = ({ title, image, navigation, servings, ingredients }) => (
   <TouchableOpacity
     style={styles.item}
     onPress={() =>
@@ -15,7 +16,7 @@ const Item = ({title, image, navigation, servings, ingredients}) => (
         image: image,
         servings: servings,
         ingredients: ingredients,
-        title: title,
+        title: title
       })
     }>
     <Image style={styles.imageStyles} source={image}></Image>
@@ -23,8 +24,8 @@ const Item = ({title, image, navigation, servings, ingredients}) => (
   </TouchableOpacity>
 );
 
-const List = ({data, navigation}) => {
-  const renderItem = ({item}) => (
+const List = ({ data, navigation }) => {
+  const renderItem = ({ item }) => (
     <Item
       title={item.title}
       image={item.image}
@@ -48,17 +49,17 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 1,
     marginVertical: 1,
-    marginHorizontal: 1,
+    marginHorizontal: 1
   },
   title: {
     fontSize: 15,
-    color: 'white',
+    color: 'white'
   },
   imageStyles: {
     width: 100,
     height: 110,
-    borderRadius: 10,
-  },
+    borderRadius: 10
+  }
 });
 
 export default List;

@@ -1,16 +1,18 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import {
   StyleSheet,
   Text,
   View,
   ImageBackground,
-  TouchableOpacity,
+  TouchableOpacity
 } from 'react-native';
-import {Icon} from 'react-native-elements';
+import { Icon } from 'react-native-elements';
 import IngredientsList from './IngredientsList';
 
-const IngrdientsScreen = ({route, navigation}) => {
-  const {image, servings, ingredients, title} = route.params;
+// eslint-disable-next-line react/prop-types
+const IngrdientsScreen = ({ route, navigation }) => {
+  const { image, servings, ingredients, title } = route.params;
   return (
     <View style={styles.container}>
       <ImageBackground style={styles.imageStyles} source={image}>
@@ -49,41 +51,41 @@ const IngrdientsScreen = ({route, navigation}) => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#282828',
-    flex: 1,
+    flex: 1
   },
   imageStyles: {
     width: '100%',
-    height: 190,
+    height: 190
   },
   imageContainerIcons: {
     flexDirection: 'row',
     marginBottom: 75,
-    padding: 5,
+    padding: 5
   },
   imageContainerIconsClose: {
-    marginRight: 250,
+    marginRight: 250
   },
   imageContainer: {
     height: '100%',
     backgroundColor: 'rgba(0,0,0,0.5)',
-    padding: 10,
+    padding: 10
   },
   imageTextCategory: {
     color: 'white',
     fontSize: 20,
-    marginLeft: 3,
+    marginLeft: 3
   },
   imageTextTitle: {
     color: 'white',
     fontSize: 30,
-    marginLeft: 3,
+    marginLeft: 3
   },
   middleText: {
     justifyContent: 'flex-start',
     fontSize: 20,
     padding: 15,
-    color: 'white',
-  },
+    color: 'white'
+  }
 });
 
 export default IngrdientsScreen;

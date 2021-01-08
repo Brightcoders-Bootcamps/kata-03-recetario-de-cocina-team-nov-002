@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import Bar from './Bar';
 import List from './List';
 
@@ -13,29 +13,29 @@ const DATA = [
       {
         id: '1',
         nombre: 'Harina',
-        cantidad: '280 gramos',
+        cantidad: '280 gramos'
       },
       {
         id: '2',
         nombre: 'Azucar',
-        cantidad: '100 gramos',
+        cantidad: '100 gramos'
       },
       {
         id: '3',
         nombre: 'Mantequilla',
-        cantidad: '125 gramos',
+        cantidad: '125 gramos'
       },
       {
         id: '4',
         nombre: 'Huevos',
-        cantidad: 3,
+        cantidad: 3
       },
       {
         id: '5',
         nombre: 'Lecha',
-        cantidad: '125 gramos',
-      },
-    ],
+        cantidad: '125 gramos'
+      }
+    ]
   },
   {
     id: '2',
@@ -46,49 +46,49 @@ const DATA = [
       {
         id: '1',
         nombre: 'Manteca',
-        cantidad: '1 cucharada',
+        cantidad: '1 cucharada'
       },
       {
         id: '2',
         nombre: 'Diente de ajo',
-        cantidad: 1,
+        cantidad: 1
       },
       {
         id: '3',
         nombre: 'Cebolla',
-        cantidad: 1,
+        cantidad: 1
       },
       {
         id: '4',
         nombre: 'Agua',
-        cantidad: '?',
+        cantidad: '?'
       },
       {
         id: '5',
         nombre: 'Caldo deshidratado',
-        cantidad: '1 cucharada',
+        cantidad: '1 cucharada'
       },
       {
         id: '6',
         nombre: 'Queso crema',
-        cantidad: '1 rodaja',
+        cantidad: '1 rodaja'
       },
       {
         id: '7',
         nombre: 'Sal',
-        cantidad: '?',
+        cantidad: '?'
       },
       {
         id: '8',
         nombre: 'Pimienta',
-        cantidad: '?',
+        cantidad: '?'
       },
       {
         id: '9',
         nombre: 'Perejil',
-        cantidad: '?',
-      },
-    ],
+        cantidad: '?'
+      }
+    ]
   },
   {
     id: '3',
@@ -99,14 +99,14 @@ const DATA = [
       {
         id: '1',
         nombre: 'Tortillas',
-        cantidad: '10',
+        cantidad: '10'
       },
       {
         id: '2',
         nombre: 'Carne',
-        cantidad: '1.5 Kg',
-      },
-    ],
+        cantidad: '1.5 Kg'
+      }
+    ]
   },
   {
     id: '4',
@@ -117,18 +117,18 @@ const DATA = [
       {
         id: '1',
         nombre: 'Masa',
-        cantidad: '10',
+        cantidad: '10'
       },
       {
         id: '2',
         nombre: 'Queso',
-        cantidad: '1.5 Kg',
-      },
-    ],
-  },
+        cantidad: '1.5 Kg'
+      }
+    ]
+  }
 ];
 
-const HomeScreen = ({navigation}) => {
+const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Bar />
@@ -144,15 +144,15 @@ const styles = StyleSheet.create({
   container: {
     padding: 4,
     backgroundColor: '#282828',
-    flex: 1,
+    flex: 1
   },
   text1: {
     fontSize: 20,
     width: 300,
     marginLeft: 10,
     marginTop: 15,
-    color: 'white',
-  },
+    color: 'white'
+  }
 });
 
 export default HomeScreen;
